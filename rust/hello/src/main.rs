@@ -3,8 +3,8 @@ fn main() {
 
 }
 
-pub fn hello() -> String {
-    "Hello, world".to_string()
+pub fn hello( name: String ) -> String {
+    "Hello, ".to_string() + &name.to_string()
 }
 
 //write test code for main above with rust
@@ -15,8 +15,8 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let result = hello();
-        assert_eq!(result, "Hello, world");
+        let result = hello(String::from("Chris"));
+        assert_eq!(result, "Hello, Chris");
     }
 }
 
